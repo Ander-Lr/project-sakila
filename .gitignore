@@ -1,0 +1,9 @@
+frontend/build/
+frontend/.dart_tool/
+frontend/.idea/
+frontend/android/.gradle/
+frontend/android/local.properties
+frontend/ios/Flutter/ephemeral/
+backend/target/
+.env
+frontend/android/app/google-services.json
