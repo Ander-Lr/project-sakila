@@ -159,3 +159,4 @@ El JWT decodificado en el frontend y validado en el backend maneja dos niveles e
 
 ## Enlace de la Colección de Postman
 
+https://web.postman.co/workspace/My-Workspace~2cee56a7-0e0f-4926-825f-54d88f47c8e4/collection/38848823-6cd0a947-306b-41de-a9ad-b7399aca4a06?action=share&source=copy-link&creator=38848823 

@@ -1,0 +1,924 @@
+{
+  "info": {
+    "_postman_id": "6cd0a947-306b-41de-a9ad-b7399aca4a06",
+    "name": "SAkila",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38848823"
+  },
+  "item": [
+    {
+      "name": "Films",
+      "item": [
+        {
+          "name": "/api/films/5",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJmdWxsTmFtZSI6IkFuZGVyc29uIExhcmEiLCJpZCI6MTAsImVtYWlsIjoiYW5kZXJzb25sbHI0QGdtYWlsLmNvbSIsInN1YiI6IjEwIiwiaWF0IjoxNzgzMjY1OTIzLCJleHAiOjE3ODMzNTIzMjMsImp0aSI6ImVlOTBmNjM5LTllYjUtNGUxZS1hZjM1LWYyOWRlMmJjNTJlOSJ9.HI6zRuNcYLss5bOvKxqdDOGbX39uiFEOnPxg7k8B3u0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"AVENGERS ENDGAME: VERSION EXTENDIDA\",\n  \"description\": \"Una peli de superheroes editada\",\n  \"releaseYear\": 2020,\n  \"languageId\": 1\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/films/1001",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "films",
+                "1001"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "api/films/5/status",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJmdWxsTmFtZSI6IkFuZGVyc29uIExhcmEiLCJpZCI6MTAsImVtYWlsIjoiYW5kZXJzb25sbHI0QGdtYWlsLmNvbSIsInN1YiI6IjEwIiwiaWF0IjoxNzgzMjY1OTIzLCJleHAiOjE3ODMzNTIzMjMsImp0aSI6ImVlOTBmNjM5LTllYjUtNGUxZS1hZjM1LWYyOWRlMmJjNTJlOSJ9.HI6zRuNcYLss5bOvKxqdDOGbX39uiFEOnPxg7k8B3u0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"active\": false\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/films/1001/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "films",
+                "1001",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear pelicula api/films",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJmdWxsTmFtZSI6IkFuZGVyc29uIExhcmEiLCJpZCI6MTAsImVtYWlsIjoiYW5kZXJzb25sbHI0QGdtYWlsLmNvbSIsInN1YiI6IjEwIiwiaWF0IjoxNzgzMjY1OTIzLCJleHAiOjE3ODMzNTIzMjMsImp0aSI6ImVlOTBmNjM5LTllYjUtNGUxZS1hZjM1LWYyOWRlMmJjNTJlOSJ9.HI6zRuNcYLss5bOvKxqdDOGbX39uiFEOnPxg7k8B3u0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"AVENGERS ENDGAME\",\n  \"description\": \"Una peli de superheroes\",\n  \"releaseYear\": 2019,\n  \"languageId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/films",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "films"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/films-busqueda",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsTmFtZSI6IkFOREVSU09OIExFTklOIExBUkEgQ0hJQ0FJWkEiLCJpZCI6MTUsImVtYWlsIjoiYWxsYXJhMUBlc3BlLmVkdS5lYyIsInN1YiI6IjE1IiwiaWF0IjoxNzgzMjY3MTE3LCJleHAiOjE3ODMzNTM1MTcsImp0aSI6IjYzYzIxMTFkLWMxZTYtNDY1NC05NjU0LWFiNGNlNWM2NTc4MiJ9.e3Weiw0e4IH7B4n_In-8xJNyvonTtta9L9Bjp6Qbckc",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/films/search?q=Action&page=1&size=10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "films",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "Action"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "api/films?hoja-tamaño",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJmdWxsTmFtZSI6IkFuZGVyc29uIExhcmEiLCJpZCI6MTAsImVtYWlsIjoiYW5kZXJzb25sbHI0QGdtYWlsLmNvbSIsInN1YiI6IjEwIiwiaWF0IjoxNzgzMjY1OTIzLCJleHAiOjE3ODMzNTIzMjMsImp0aSI6ImVlOTBmNjM5LTllYjUtNGUxZS1hZjM1LWYyOWRlMmJjNTJlOSJ9.HI6zRuNcYLss5bOvKxqdDOGbX39uiFEOnPxg7k8B3u0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/films?page=1&size=10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "films"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "api/films",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJmdWxsTmFtZSI6IkFuZGVyc29uIExhcmEiLCJpZCI6MTAsImVtYWlsIjoiYW5kZXJzb25sbHI0QGdtYWlsLmNvbSIsInN1YiI6IjEwIiwiaWF0IjoxNzgzMjY1OTIzLCJleHAiOjE3ODMzNTIzMjMsImp0aSI6ImVlOTBmNjM5LTllYjUtNGUxZS1hZjM1LWYyOWRlMmJjNTJlOSJ9.HI6zRuNcYLss5bOvKxqdDOGbX39uiFEOnPxg7k8B3u0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/films",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "films"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Inventory",
+      "item": [
+        {
+          "name": "ObtieneEjemplaresPorID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsTmFtZSI6IkFOREVSU09OIExFTklOIExBUkEgQ0hJQ0FJWkEiLCJpZCI6MTUsImVtYWlsIjoiYWxsYXJhMUBlc3BlLmVkdS5lYyIsInN1YiI6IjE1IiwiaWF0IjoxNzgzMjY3MTE3LCJleHAiOjE3ODMzNTM1MTcsImp0aSI6IjYzYzIxMTFkLWMxZTYtNDY1NC05NjU0LWFiNGNlNWM2NTc4MiJ9.e3Weiw0e4IH7B4n_In-8xJNyvonTtta9L9Bjp6Qbckc",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/inventory?filmId=1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "inventory"
+              ],
+              "query": [
+                {
+                  "key": "filmId",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "NuevoEjemplar",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsTmFtZSI6IkFOREVSU09OIExFTklOIExBUkEgQ0hJQ0FJWkEiLCJpZCI6MTUsImVtYWlsIjoiYWxsYXJhMUBlc3BlLmVkdS5lYyIsInN1YiI6IjE1IiwiaWF0IjoxNzgzMjY3MTE3LCJleHAiOjE3ODMzNTM1MTcsImp0aSI6IjYzYzIxMTFkLWMxZTYtNDY1NC05NjU0LWFiNGNlNWM2NTc4MiJ9.e3Weiw0e4IH7B4n_In-8xJNyvonTtta9L9Bjp6Qbckc",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filmId\": 1,\n  \"storeId\": 1\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/inventory",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "inventory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DesactivaActivaVHS",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsTmFtZSI6IkFOREVSU09OIExFTklOIExBUkEgQ0hJQ0FJWkEiLCJpZCI6MTUsImVtYWlsIjoiYWxsYXJhMUBlc3BlLmVkdS5lYyIsInN1YiI6IjE1IiwiaWF0IjoxNzgzMjY3MTE3LCJleHAiOjE3ODMzNTM1MTcsImp0aSI6IjYzYzIxMTFkLWMxZTYtNDY1NC05NjU0LWFiNGNlNWM2NTc4MiJ9.e3Weiw0e4IH7B4n_In-8xJNyvonTtta9L9Bjp6Qbckc",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"active\": true\n}   ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/inventory/4582/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "inventory",
+                "4582",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DevuelveInventarioAlquiladoDisponible",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsTmFtZSI6IkFOREVSU09OIExFTklOIExBUkEgQ0hJQ0FJWkEiLCJpZCI6MTUsImVtYWlsIjoiYWxsYXJhMUBlc3BlLmVkdS5lYyIsInN1YiI6IjE1IiwiaWF0IjoxNzgzMjY3MTE3LCJleHAiOjE3ODMzNTM1MTcsImp0aSI6IjYzYzIxMTFkLWMxZTYtNDY1NC05NjU0LWFiNGNlNWM2NTc4MiJ9.e3Weiw0e4IH7B4n_In-8xJNyvonTtta9L9Bjp6Qbckc",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/inventory/1/availability",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "inventory",
+                "1",
+                "availability"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rentails",
+      "item": [
+        {
+          "name": "admin",
+          "item": [
+            {
+              "name": "ObtenerAlquileres",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJmdWxsTmFtZSI6IkFuZGVyc29uIExhcmEiLCJpZCI6MTYsImVtYWlsIjoiYW5kZXJzb25sbHI0QGdtYWlsLmNvbSIsInN1YiI6IjE2IiwiaWF0IjoxNzgzMzQ5MTk2LCJleHAiOjE3ODM0MzU1OTYsImp0aSI6IjQ0ZWY3ZjkyLTNjNWMtNDNmZi04NDRlLWE5Njg4MjgzNWJiMSJ9.5cPBCVvsYt2An4JFO4KHJmMvoFLwtoPzTUWuYlP8hYA",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/rentals",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rentals"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "SoloAlquilerUnCliente",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJmdWxsTmFtZSI6IkFuZGVyc29uIExhcmEiLCJpZCI6MTYsImVtYWlsIjoiYW5kZXJzb25sbHI0QGdtYWlsLmNvbSIsInN1YiI6IjE2IiwiaWF0IjoxNzgzMzQ5MTk2LCJleHAiOjE3ODM0MzU1OTYsImp0aSI6IjQ0ZWY3ZjkyLTNjNWMtNDNmZi04NDRlLWE5Njg4MjgzNWJiMSJ9.5cPBCVvsYt2An4JFO4KHJmMvoFLwtoPzTUWuYlP8hYA",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/rentals?customerId=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rentals"
+                  ],
+                  "query": [
+                    {
+                      "key": "customerId",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "EjemplaresUnaPelícula",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJmdWxsTmFtZSI6IkFuZGVyc29uIExhcmEiLCJpZCI6MTYsImVtYWlsIjoiYW5kZXJzb25sbHI0QGdtYWlsLmNvbSIsInN1YiI6IjE2IiwiaWF0IjoxNzgzMzQ5MTk2LCJleHAiOjE3ODM0MzU1OTYsImp0aSI6IjQ0ZWY3ZjkyLTNjNWMtNDNmZi04NDRlLWE5Njg4MjgzNWJiMSJ9.5cPBCVvsYt2An4JFO4KHJmMvoFLwtoPzTUWuYlP8hYA",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/rentals?filmId=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rentals"
+                  ],
+                  "query": [
+                    {
+                      "key": "filmId",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "AlquileresEnFecha",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJmdWxsTmFtZSI6IkFuZGVyc29uIExhcmEiLCJpZCI6MTYsImVtYWlsIjoiYW5kZXJzb25sbHI0QGdtYWlsLmNvbSIsInN1YiI6IjE2IiwiaWF0IjoxNzgzMzQ5MTk2LCJleHAiOjE3ODM0MzU1OTYsImp0aSI6IjQ0ZWY3ZjkyLTNjNWMtNDNmZi04NDRlLWE5Njg4MjgzNWJiMSJ9.5cPBCVvsYt2An4JFO4KHJmMvoFLwtoPzTUWuYlP8hYA",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/rentals?date=2005-05-24",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rentals"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "2005-05-24"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "ObtenerAlquilerEspecifico",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsTmFtZSI6IkFOREVSU09OIExFTklOIExBUkEgQ0hJQ0FJWkEiLCJpZCI6MTUsImVtYWlsIjoiYWxsYXJhMUBlc3BlLmVkdS5lYyIsInN1YiI6IjE1IiwiaWF0IjoxNzgzMjY3MTE3LCJleHAiOjE3ODMzNTM1MTcsImp0aSI6IjYzYzIxMTFkLWMxZTYtNDY1NC05NjU0LWFiNGNlNWM2NTc4MiJ9.e3Weiw0e4IH7B4n_In-8xJNyvonTtta9L9Bjp6Qbckc",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/rentals/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rentals",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "ObtenerDevoluciones",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsTmFtZSI6IkFOREVSU09OIExFTklOIExBUkEgQ0hJQ0FJWkEiLCJpZCI6MTUsImVtYWlsIjoiYWxsYXJhMUBlc3BlLmVkdS5lYyIsInN1YiI6IjE1IiwiaWF0IjoxNzgzMjY3MTE3LCJleHAiOjE3ODMzNTM1MTcsImp0aSI6IjYzYzIxMTFkLWMxZTYtNDY1NC05NjU0LWFiNGNlNWM2NTc4MiJ9.e3Weiw0e4IH7B4n_In-8xJNyvonTtta9L9Bjp6Qbckc",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/rentals/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rentals",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Client",
+          "item": [
+            {
+              "name": "DevolverPelícula",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJmdWxsTmFtZSI6IkFuZGVyc29uIExhcmEiLCJpZCI6MTYsImVtYWlsIjoiYW5kZXJzb25sbHI0QGdtYWlsLmNvbSIsInN1YiI6IjE2IiwiaWF0IjoxNzgzMjkwNjM5LCJleHAiOjE3ODMzNzcwMzksImp0aSI6IjAzMjcxMmU2LTc3NDEtNDJjNC04MTlkLWE1MjA2ZDBkMGIzNyJ9.LuzetfssHqLgQHBVjGWC-LH2FI_nuPGOJG8oxEh2l3A",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/rentals/7/return",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rentals",
+                    "7",
+                    "return"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "PeliculasActivasAC",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJmdWxsTmFtZSI6IkFuZGVyc29uIExhcmEiLCJpZCI6MTYsImVtYWlsIjoiYW5kZXJzb25sbHI0QGdtYWlsLmNvbSIsInN1YiI6IjE2IiwiaWF0IjoxNzgzMjkwNjM5LCJleHAiOjE3ODMzNzcwMzksImp0aSI6IjAzMjcxMmU2LTc3NDEtNDJjNC04MTlkLWE1MjA2ZDBkMGIzNyJ9.LuzetfssHqLgQHBVjGWC-LH2FI_nuPGOJG8oxEh2l3A",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/films/available",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "films",
+                    "available"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "EjemplaresFísicosID",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsTmFtZSI6IkFOREVSU09OIExFTklOIExBUkEgQ0hJQ0FJWkEiLCJpZCI6MTcsImVtYWlsIjoiYWxsYXJhMUBlc3BlLmVkdS5lYyIsInN1YiI6IjE3IiwiaWF0IjoxNzgzMjk0NDU5LCJleHAiOjE3ODMzODA4NTksImp0aSI6ImIyMWJhODY4LTJhM2MtNDBmNS05NTUwLWFmOTBlZWRmOWRiZSJ9.M82WLxs8xpkOiq77h7aSfOFt5Ss8n8cZYsKwnQfeYy0",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/films/5/inventory",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "films",
+                    "5",
+                    "inventory"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "CreaciónAlquiler",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJmdWxsTmFtZSI6IkFuZGVyc29uIExhcmEiLCJpZCI6MTYsImVtYWlsIjoiYW5kZXJzb25sbHI0QGdtYWlsLmNvbSIsInN1YiI6IjE2IiwiaWF0IjoxNzgzMjk0NTU4LCJleHAiOjE3ODMzODA5NTgsImp0aSI6IjlhYTdkZDUyLWYxOWMtNDI5MC1hNjdhLTQ4YTJjMTJmYTE1OCJ9.kmF7jUj0sg14iWgnNUqT7u7Q28JeuXBKZDHi4NX_so8",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"inventoryId\": 10,\n  \"cardNumber\": \"4111111111111111\",\n  \"cardHolder\": \"Anderson Lara\",\n  \"expirationDate\": \"12/26\",\n  \"cvv\": \"123\"\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/rentals",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rentals"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "VerMiHistorialAlquileres",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJmdWxsTmFtZSI6IkFuZGVyc29uIExhcmEiLCJpZCI6MTYsImVtYWlsIjoiYW5kZXJzb25sbHI0QGdtYWlsLmNvbSIsInN1YiI6IjE2IiwiaWF0IjoxNzgzMjkwNjM5LCJleHAiOjE3ODMzNzcwMzksImp0aSI6IjAzMjcxMmU2LTc3NDEtNDJjNC04MTlkLWE1MjA2ZDBkMGIzNyJ9.LuzetfssHqLgQHBVjGWC-LH2FI_nuPGOJG8oxEh2l3A",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8080/api/rentals/mine",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rentals",
+                    "mine"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:8080/api/admin/logs",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsTmFtZSI6IkFOREVSU09OIExFTklOIExBUkEgQ0hJQ0FJWkEiLCJpZCI6MTcsImVtYWlsIjoiYWxsYXJhMUBlc3BlLmVkdS5lYyIsInN1YiI6IjE3IiwiaWF0IjoxNzgzMjk0NjI5LCJleHAiOjE3ODMzODEwMjksImp0aSI6IjA0N2U0NTg0LTUwNDItNDUwYS1iMGJkLTRlOWQxNGJkOTg5OSJ9.RKI97QZkCce4VO5HnwnQWBPIJZs1bWAVbDU5cSfoZu4",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/admin/logs",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "admin",
+                "logs"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
